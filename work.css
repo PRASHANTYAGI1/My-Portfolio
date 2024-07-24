@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    font-family: "EB Garamond", serif;
+}
+/* header css */
+#hiddenmenu {
+    position: absolute;
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    background-color: rgba(118, 241, 255, 0.169);
+    backdrop-filter: blur(10px);
+    right: 0;
+    z-index: 1;
+    display: none; /* Initially hidden */
+    transform: translateX(100%); /* Slide in from right */
+    transition: 0.5s ease; /* Animation for smoother transition */
+  }
+  #hiddenmenu>ul>li a{
+    color: #17262B;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    
+}
+  
+  #hiddenmenu.open { /* Style for open state */
+    display: block;
+    transform: translateX(0); /* Slide in animation */
+  }
+  #hiddenmenu.close { /* Style for open state */
+    display: none;
+    transform: translateX(100%); /* Slide in animation */
+  }
+  
+  #hiddenmenu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #hiddenmenu > ul > li {
+    margin: 20px;
+  }
+  #menu2{
+    position: absolute;
+    left:10em;
+    top :10px;
+  }
+  
+  
+  /* .hiddenmenu-open { */
+    /* transform: translateX(0); Slide the menu in from the right */
+    /* background-color: pink; Optional: change background color on open */
+  /* } */
+  
+
+
+nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    background: rgba(255, 255, 255, 0.45);
+border-radius: 16px;  
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   backdrop-filter: blur(5.6px);
+-webkit-backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.6);
+    /* border-bottom: .1px solid black; */
+
+}
+
+nav>h1 {
+    font-size: 2em;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    list-style-type: none;
+}
+
+
+nav>ul>li>a{
+    color: black;
+    text-decoration: none;
+    gap: 0;
+  }
+#menu {
+    display: none;
+}
+/* main content css */
+#workwrapper{
+    position: relative;
+    width: 100vw;
+    height:fit-content;
+    padding: 10px;
+    /* background-color: pink; */
+}
+#workwrapper>h1{
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    font-size: 14em;
+    text-shadow: 2px 2px black -1px -1px black;
+}
+.workcont{
+    position: absolute;
+    top:70%;
+    margin-top: 2px;
+    background-color:white;
+    width: 100vw;
+    height:150%;
+   
+   display: flex;
+   justify-content:center;
+   flex-wrap: wrap;
+   padding: 5%;
+   /* background-color: black; */
+
+}
+.dv{
+     width: 40%;
+     height:100%;
+     margin:2%;
+     border-radius: 20px;
+     padding: 40px;
+     background-position:center;
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+.dv:hover{
+    animation:work 2s infinite;
+}
+@keyframes work {
+ 0%,100%{
+    transform:scale(1);
+    
+ }
+ 50%{
+    transform: scale(1.1);
+ }
+}
+.one{
+  background-image: url(https://i.pinimg.com/736x/f1/ac/2a/f1ac2a302ddfd436e35d6856805b9a40.jpg);
+}
+.one>a{
+    text-decoration: none;
+}
+.one>a>h2{
+    color: white;
+    font-size: 2em;
+    text-transform: capitalize;
+    gap: 10%;
+    
+}
+.two{
+    background-image: url(work2.jpg); 
+ 
+}
+.two>a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 600;
+}
+.three{
+    background-image: url(work3.avif);
+}
+.three>a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 600;
+}
+.four{
+   background-image: url(work4.jpg);
+}
+.four>a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* footer css */
+footer {
+    /* position: absolute; */
+    margin-top: 50%;
+    width: 100%;
+    height: 200px;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2px;
+    color: white;
+}
+.rightfoot a i {
+    color: rgb(1, 254, 47);
+  }
+
+.leftfoot>h2 {
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.leftfoot>p {
+    font-size: 1.2em;
+    word-spacing: 3px;
+}
+
+.rightfoot {
+    color: rgb(107, 107, 49);
+    width: 10%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #17262B;
+    box-shadow: 1px 1px white;
+    border-radius: 10px;
+}
+.rightfoot>a{
+    text-decoration: none;
+    color: rgb(107, 107, 49);
+}
+
+/* General Styles (applies to all devices) */
+
+/* Media Queries for devices 768px and above */
+@media (min-width: 768px) {
+    nav>ul{
+        gap: 5rem;
+        font-weight: 600; 
+    }
+   
+ 
+   
+    #menu{
+        display: none;
+    }
+    #workwrapper > h1 {
+        font-size: 15rem; /* Set large font size */
+    }
+
+    .workcont {
+        position: relative; /* Set relative positioning */
+        display: flex; /* Use flexbox layout */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .dv {
+        width: 90%; 
+        height:500px;           /* Make sure div takes the full width */
+        box-sizing: border-box; /* Ensure padding/margin do not add to the width */
+        
+    }
+    footer{
+        margin-top: 0%;
+    }
+}
+
+/* Media Queries for devices 476px and below */
+@media (max-width: 476px) {
+    nav {
+        position: relative;
+        width: 100vw;
+        padding: 2rem;
+    }
+
+    #workwrapper {
+        width: 100%; /* Ensure full width */
+        height: 100%; /* Ensure full height */
+    }
+
+    #workwrapper > h1 {
+        font-size: 5rem; /* Set smaller font size */
+        font-weight: 300; /* Adjust font weight */
+    }
+
+    .workcont {
+        position: relative; /* Set relative positioning */
+        flex-direction: column; /* Stack items vertically */
+        padding: 2%; /* Add padding */
+    }
+
+    .dv {
+        width: 90%; /* Adjust width */
+    }
+
+    .two {
+        height: 110%; /* Adjust height */
+    }
+
+    footer{
+        width: 100%;
+        height: fit-content;
+        margin-top:18rem;
+        flex-direction: column;
+        gap: 1.3rem;
+        padding: 2rem;
+    }
+    .rightfoot {
+        width: 90%; /* Adjust width */
+        height: 20%; /* Adjust height */
+
+    }
+}
+
+/* all over complete  */

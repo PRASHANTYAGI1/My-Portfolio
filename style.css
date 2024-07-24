@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+#hiddenmenu {
+    position: absolute;
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    background-color: rgba(118, 241, 255, 0.169);
+    backdrop-filter: blur(10px);
+    right: 0;
+    z-index: 1;
+    display: none; /* Initially hidden */
+    transform: translateX(100%); /* Slide in from right */
+    transition: 0.5s ease; /* Animation for smoother transition */
+}
+
+#hiddenmenu.open { /* Style for open state */
+    display: block;
+    transform: translateX(0); /* Slide in animation */
+}
+
+#hiddenmenu.close { /* Style for open state */
+    display: none;
+    transform: translateX(100%); /* Slide in animation */
+}
+
+#hiddenmenu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hiddenmenu > ul > li {
+    margin: 20px;
+}
+
+#menu2 {
+    position: absolute;
+    left: 10em;
+    top: 10px;
+}
+
+/* .hiddenmenu-open { */
+/* transform: translateX(0); Slide the menu in from the right */
+/* background-color: pink; Optional: change background color on open */
+/* } */
+
+nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    /* border-bottom: .1px solid black; */
+}
+
+nav > h1 {
+    font-size: 2em;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav > ul > li {
+    margin: 20px;
+    font-size: .90rem;
+    font-weight: 600;
+}
+
+nav > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+#menu {
+    display: none;
+}
+
+#herosection {
+    width: 100%;
+    height: 90%;
+    margin-top: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+
+.leftcont {
+    border-radius: 20px;
+    width: 50%;
+    height: fit-content;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 60px;
+}
+
+.automove {
+    color: #9F6BA0;
+}
+
+.leftcont > h1 {
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.leftcont > p {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.buttondiv {
+    margin-top: 6em;
+}
+
+.buttondiv > button {
+    cursor: pointer;
+    font-weight: 700;
+    background-color: #b4b4da00;
+    backdrop-filter: blur(20px);
+    width: 3em;
+    height: 3em;
+    margin-left: 20px;
+    border: 1px solid rgba(157, 142, 255, 0.564);
+    border-radius: 50px;
+    color: #17262B;
+}
+
+.buttondiv > button:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.buttondiv > button > a {
+    color: #17262B;
+}
+
+#letswork {
+    width: 10em;
+    height: 3em;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+.rightcont {
+    border-radius: 20px;
+    width: 45%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background: rgb(23, 162, 190);
+    background: radial-gradient(circle, rgba(23, 162, 190, 1) 0%, rgba(159, 217, 228, 1) 0%, rgba(253, 253, 255, 1) 59%);
+}
+
+.rightcont > img {
+    width: 200%;
+    height: 110%;
+}
+
+footer {
+    /* position: absolute; */
+    margin-top: 2%;
+    width: 100%;
+    height: 200px;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2px;
+    color: white;
+    box-shadow: 1px 1px white;
+    border-radius: 10px;
+}
+
+.leftfoot > h2 {
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.leftfoot > p {
+    font-size: 1.2em;
+    word-spacing: 3px;
+}
+
+.rightfoot {
+    color: rgb(107, 107, 49);
+    width: 10%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #17262B;
+    box-shadow: 1px 1px whitesmoke;
+    border-radius: 10px;
+}
+
+.rightfoot > a {
+    text-decoration: none;
+    color: rgb(107, 107, 49);
+}
+
+/* work page css */
+
+#workwrapper {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    padding: 20px;
+    /* background-color: pink; */
+}
+
+#workwrapper > button {
+    left: 40%;
+    bottom: 0%;
+    position: absolute;
+    width: 20%;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 1px solid #9F6BA0;
+}
+
+#workwrapper > h1 {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    font-size: 15em;
+    text-shadow: 2px 2px black -1px -1px black;
+}
+
+.workcont {
+    position: absolute;
+    top: 32%;
+    margin-top: 2px;
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.dv {
+    width: 40%;
+    height: 100%;
+    margin: 2%;
+    border-radius: 20px;
+    padding: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dv:hover {
+    animation: work 2s infinite;
+}
+
+@keyframes work {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.one {
+    background-image: url(https://i.pinimg.com/736x/f1/ac/2a/f1ac2a302ddfd436e35d6856805b9a40.jpg);
+}
+
+.one > a {
+    text-decoration: none;
+}
+
+.one > a > h2 {
+    color: white;
+    font-size: 2em;
+    text-transform: capitalize;
+    gap: 10%;
+}
+
+.two {
+    background-image: url(work2.jpg);
+}
+
+.two > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.three {
+    background-image: url(work3.avif);
+}
+
+.three > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.four {
+    background-image: url(work4.jpg);
+}
+
+.four > a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* contact css */
+
+#contactpg {
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+    /* margin-top: 10%; */
+    padding: 2%;
+    position: relative;
+}
+
+#contactpg > h1 {
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    font-size: 12em;
+    text-shadow: 2px 2px black -1px -1px black;
+}
+
+.dvcontact {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+    padding: 40px;
+    background-image: linear-gradient(to right, #ddd6f341, #faaca842);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dvcontact > h2 {
+    color: #242424;
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.dvcontact > button {
+    width: 20em;
+    height: 5em;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+}
+
+.dvcontact > button > a {
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #17262B;
+    font-weight: 900;
+}
+
+@media (min-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100vw;
+        height: 100px;
+        padding: 1.7rem;
+    }
+    nav>ul>li>a{
+        font-weight: 400;
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    #herosection{
+        width: 100%;
+        height: fit-content;
+        position: relative;
+        margin-top: 10rem;
+    }
+    .massage{
+        display: none;
+    }
+    /* work page  */
+    #workwrapper{
+        width: 100%;
+        /* background-color: red; */
+        margin-bottom: 2rem;
+    
+    }
+    .workcont{
+     top: 20rem;
+     left: 0; 
+     height: fit-content;
+    }
+    .dv{
+        width:auto;
+        height: 100%;
+    }
+    .buttonn{
+        position: absolute;
+        top: 48rem;
+        height: fit-content;
+    }
+    #contactpg{
+        /* background-color: black; */
+        /* position: absolute; */
+        margin-top: 3rem;
+    }
+    #contactpg>h1{
+        font-size: 10rem;
+    }
+}
+
+@media (max-width: 476px) {
+    body {
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    nav {
+        position: relative;
+        width: 100vw;
+        padding: 2rem;
+    }
+    nav>h1{
+        font-size: 1.5rem;
+    }
+    nav>ul{
+        display: none;
+    }
+    #menu{
+        display: contents;
+    }
+    #herosection{
+        margin-top: 0;
+        height: fit-content;
+        /* background-color: black; */
+        flex-direction: column-reverse;
+    }
+    .leftcont{
+        width: 100%;
+        height: fit-content;
+        gap: 1rem;
+        
+    }
+    .leftcont>h1{
+        font-size: 2rem;
+    }
+    .leftcont>p{
+        font-size: 1.2rem;
+    }
+    .buttondiv{
+        margin-top:2rem ;
+        /* background-color: black; */
+    }
+    .massage{
+        display: none;
+    }
+    .buttondiv>button{
+        width: 50px;
+        height: 50px;
+        /* background-color: red; */
+        margin: 5px 0;
+    }
+    /* button:hover{
+        border:none;
+        box-shadow: none;
+    } */
+    .buttondiv>button{
+        /* width: 1.5rem;
+        margin: .5rem; */
+        border:none
+    }
+    .rightcont{
+        width: 100%;
+    }
+    /* work media queries  */
+    
+    #workwrapper>h1{
+        /* background-color: black; */
+        font-size: 6rem;
+        font-weight: 300;
+        padding: 0 1px;
+    }
+    .workcont{
+        top: 8.5rem;
+        left: 0;
+        /* background-color: black; */
+        margin-top: 0%;
+        flex-direction: column;
+        height: fit-content;
+        padding: 0;
+    }
+    .dv{
+        width: 80%;
+        height: 7rem;
+        font-size:.8rem;
+        font-weight: 500;
+    }
+    /* contact mediaqueries  */
+  #contactpg{
+    height:60%;
+  }
+  #contactpg>h1{
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  .dvcontact{
+    top: 6rem;
+    gap: 2rem;
+  }
+  .dvcontact>h2{
+    font-size: 1.9rem;
+    text-align: center;
+  }
+  footer{
+    width: 100%;
+    height: fit-content;
+    margin-top:5rem;
+    flex-direction: column;
+    gap: 1.3rem;
+    padding:2rem;
+    box-shadow: 1px 1px whitesmoke;
+}
+  .rightfoot{
+    width: 100%;
+  }
+  .rightfoot a i {
+    color: rgb(1, 254, 47);
+  }
+}

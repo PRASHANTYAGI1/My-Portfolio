@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   overflow-x: hidden;
+   font-family: "EB Garamond", serif;
+}
+
+/* header css */
+#hiddenmenu {
+    position: absolute;
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    background-color: rgba(118, 241, 255, 0.169);
+    backdrop-filter: blur(10px);
+    right: 0;
+    z-index: 1;
+    display: none; /* Initially hidden */
+    transform: translateX(100%); /* Slide in from right */
+    transition: 0.5s ease; /* Animation for smoother transition */
+  }
+  
+  #hiddenmenu.open { /* Style for open state */
+    display: block;
+    transform: translateX(0); /* Slide in animation */
+  }
+  #hiddenmenu.close { /* Style for open state */
+    display: none;
+    transform: translateX(100%); /* Slide in animation */
+  }
+  
+  #hiddenmenu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #hiddenmenu > ul > li {
+    margin: 20px;
+  }
+  #menu2{
+    position: absolute;
+    left:10em;
+    top :10px;
+  }
+  
+  
+  /* .hiddenmenu-open { */
+    /* transform: translateX(0); Slide the menu in from the right */
+    /* background-color: pink; Optional: change background color on open */
+  /* } */
+  
+
+
+nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: absolute; */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.6px);
+-webkit-backdrop-filter: blur(5.6px);
+border: 1px solid rgba(255, 255, 255, 0.6);
+    /* border-bottom: .1px solid black; */
+
+}
+#hiddenmenu{
+    background-color: #29030346;
+    backdrop-filter: blur(5px);
+}
+
+nav>h1 {
+    font-size: 2em;
+}
+
+nav>ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+nav>ul>li {
+    margin: 20px;
+    font-size: .90rem;
+    font-weight: 600;
+}
+nav>ul>li>a{
+    color: black;
+    text-decoration: none;
+  }
+
+#menu {
+    display: none;
+}
+/* contact css */
+#maincontact{
+    width: 100vw;
+    height: calc(100vh - 70px);
+    padding:1px;
+    position: relative;
+}
+#maincontact>h1{
+    margin-top:0px ;
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    font-size: 10em;
+    text-shadow: 2px 2px black -1px -1px black;
+}
+.innerdiv{
+    position: absolute;
+    top: 28%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 2%;
+    background-color: white;
+    padding: 30px;
+}
+.left
+{   
+    border-radius: 20px;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.left>img{
+    width: 100%;
+    height: 100%;
+}
+.right{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 5%;
+   /* background-color: red; */
+}
+form{
+    width: 100%;
+}
+ input[type=text] {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 2px solid rgb(0, 0, 0);
+     }
+
+textarea{
+    height: 50%;
+    width: 100%;
+    padding: 10px;
+}
+
+input[type=submit]{
+    width: 100%;
+    height: 2em;
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #17262B;
+    font-size:1.2em;
+    font-weight: 700;
+}
+
+/* footer css */
+footer {
+    margin-top: 15%;
+     width: 100%;
+    height: 200px;
+    background-color: #242424;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2px;
+    color: white;
+}
+.rightfoot a i {
+    color: rgb(1, 254, 47);
+  }
+
+.leftfoot>h2 {
+    text-transform: capitalize;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.leftfoot>p {
+    font-size: 1.2em;
+    word-spacing: 3px;
+}
+
+.rightfoot {
+    border-radius: 10px;
+    color: rgb(107, 107, 49);
+    width: 10%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #17262B;
+    box-shadow: 1px 1px white;
+}
+.rightfoot>a{
+    text-decoration: none;
+    color: rgb(107, 107, 49);
+}
+
+
+/* media queries  */
+
+@media (min-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100%;
+        height: 100px;
+    }
+    #maincontact {
+        width: 100%;
+        height: 100%;
+    }
+    #maincontact>h1{
+        /* background-color: black; */
+        font-size: 10rem;
+    }
+    .innerdiv{
+        background-color: #fff;
+        top: 70%;
+        height: fit-content;
+    }
+    form{
+        height: fit-content;
+    }
+    .left>img{
+        filter: blur(2px);
+        height: 40rem;
+        border-radius: 20px;
+    }
+    footer{
+        position: relative;
+        margin-top: 40rem;
+        z-index: -1;
+    }
+}
+@media (max-width:476px) {
+    body{
+        overflow-x: hidden;
+    }
+    nav {
+        position: relative;
+        width: 100vw;
+        padding: 2rem;
+    }
+    nav>ul{
+        display: none;
+    }
+    #menu{
+        display: block;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    #maincontact{
+        margin-top: 0;
+        /* background-color: black; */
+        position: absolute;
+   
+    }
+    #maincontact>h1{
+        font-size: 4rem;
+        font-weight: 900;
+    }
+    .innerdiv{
+       height: fit-content;
+      /* background-color: black; */
+      /* flex-wrap: wrap; */
+    }
+    .left{
+        display: none;
+    }
+    .right{
+       
+        border-radius: 10px;
+        width: 100%;
+        color: rgb(0, 0, 0);
+        font-size: 1.2rem;
+        box-sizing: border-box;
+        padding: 0px;
+    }
+    .right>form>input{
+        color: rgb(0, 0, 0);
+        
+        background-color: transparent;
+    }
+    form{
+        box-sizing: border-box;
+       padding: 20px;
+    
+    }
+    form>textarea{
+        background-color: transparent;
+        border: 1px solid rgb(5, 5, 5);
+    }
+    footer{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: auto;
+        margin-top:18rem;
+        flex-direction: column;
+        gap: 1.3rem;
+        padding: 2rem;
+    }
+    .rightfoot{
+        width: 100%;
+    }
+}
+
+/* overall complete  */

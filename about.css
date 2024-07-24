@@ -1,0 +1,429 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "EB Garamond", serif;
+}
+
+/* nav css */
+
+#hiddenmenu {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(122, 101, 166, 0.169);
+    backdrop-filter: blur(10px);
+    right: 0;
+    z-index: 1;
+    display: none;
+    transform: translateX(100%);
+    transition: 0.5s ease;
+}
+#hiddenmenu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#hiddenmenu.open {
+    display: block;
+    transform: translateX(0);
+}
+
+#hiddenmenu.close {
+    display: none;
+    transform: translateX(100%);
+}
+
+#hiddenmenu > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hiddenmenu > ul > li {
+    margin: 20px;
+}
+
+#menu2 {
+    position: absolute;
+    left: 10em;
+    top: 10px;
+    
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+nav > h1 {
+    font-size: 1.5em;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav > ul > li {
+    margin: 0 3rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+nav > ul > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+#menu {
+    font-size: 1.2rem;
+    display: none;
+}
+
+/* about css */
+
+#aboutcont {
+    width: 100%;
+    height: 100vh;
+}
+
+#aboutcont > h1 {
+    padding-left: 5%;
+    -webkit-text-stroke: 2px black;
+    color: transparent;
+    font-size: 8em;
+    text-shadow: 2px 2px black -1px -1px black;
+}
+
+.innercont {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.abtleft {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abtleft > svg {
+    width: 80%;
+    height: 100%;
+}
+
+.abtleft > img {
+    position: absolute;
+    left: 30%;
+    scale: 1.5;
+}
+
+.abtright {
+    width: 40%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+
+.abtright > p {
+    font-size: 1.5em;
+    word-spacing: 10px;
+}
+
+.skillhead {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 10rem;
+}
+
+.skills {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.leftskil {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill > h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    background: rgba(0, 0, 0, 0.4);
+    width: 40rem;
+    height: .8rem;
+    border-radius: 10px;
+}
+
+.progress-bar div {
+    height: .8rem;
+    border-radius: 10px;
+    width: 0%;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+
+.progress-bar div span {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: whitesmoke;
+    float: right;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: -9px;
+    margin-right: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.html {
+    animation: html 1s linear forwards;
+}
+
+.css {
+    animation: css 1s linear forwards;
+}
+
+.javaScript {
+    animation: javaScript 1s linear forwards;
+}
+
+.tlcss {
+    animation: tlcss 1s linear forwards;
+}
+
+.ccpp {
+    animation: ccpp 1s linear forwards;
+}
+
+.python {
+    animation: python 1s linear forwards;
+}
+
+@keyframes html {
+    100% {
+        width: 90%;
+    }
+}
+
+@keyframes css {
+    100% {
+        width: 80%;
+    }
+}
+
+@keyframes javaScript {
+    100% {
+        width: 70%;
+    }
+}
+
+@keyframes tlcss {
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes ccpp {
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes python {
+    100% {
+        width: 60%;
+    }
+}
+
+.rightskil {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightskil > img {
+    width: 100%;
+    height: 60;
+    filter: grayscale(50%);
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    background-color: #231d1d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30rem;
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    color: whitesmoke;
+}
+
+.rightfoot {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 1px 1px rgba(255, 255, 255, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightfoot > a {
+    color: rgb(1, 254, 47);
+    text-decoration: none;
+}
+
+
+@media (max-width: 1115px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav{
+        width: 100%;
+    }
+    .skills{
+        margin-top: 5rem;
+        flex-direction: column-reverse;
+    }
+    .rightskil{
+        padding: 5rem;
+        width: 100%;
+    }
+    
+    footer{
+        margin-top:10rem ;
+    }
+}
+
+@media (max-width: 476px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        position: relative;
+        width: 100vw;
+        padding: 2rem;
+    }
+    nav > ul {
+        display: none;
+    }
+    #menu {
+        display: block;
+    }
+    #aboutcont h1 {
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    .innercont {
+        box-sizing: border-box;
+        position: relative;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .abtleft {
+        width: 100%;
+    }
+    .abtleft svg{
+        width: 200px;
+    }
+    .abtleft > img {
+        z-index: 1;
+        margin-left: .5rem;
+        width: 12rem;
+    }
+    .abtright {
+        width: 100%;
+        padding: 2rem;
+    }
+    .skillhead {
+        font-size: 3.5rem;
+    }
+    .skills {
+        box-sizing: border-box;
+        flex-direction: column-reverse;
+    }
+    .leftskil {
+        width: 100%;
+        height: fit-content;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+    .progress-bar {
+        box-sizing: border-box;
+        width: 16rem;
+    }
+    .skill {
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .rightskil .skilimg {
+        box-sizing: border-box;
+        margin-top: 10rem;
+        width: 20rem;
+    }
+    footer {
+        box-sizing: border-box;
+        width: 100%;
+        height: fit-content;
+        margin-top: 18rem;
+        flex-direction: column;
+        gap: 1.3rem;
+    }
+    .rightfoot {
+        width: 100%;
+    }
+}

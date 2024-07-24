@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div id="hiddenmenu">
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <i class="ri-close-large-line" id="menu2"></i>
+    </div>
+
+    <nav>
+      <h1>PRASHANT</h1>
+      <ul class="">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="work.html">WORK</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <i class="ri-menu-4-line" id="menu"></i>
+    </nav>
+    <!-- contact content -->
+    <div id="maincontact">
+      <h1>CONTACT</h1>
+      <div class="innerdiv">
+        <div class="left"><img src="contactpg.jpg" alt="" /></div>
+        <div class="right">
+          <form action="/action_page.php">
+            <label for="fname">First name:</label><br />
+            <input type="text" id="fname" name="fname" value="" /><br />
+            <label for="lname">Last name:</label><br />
+            <input type="text" id="lname" name="lname" value="" /><br />
+            <label for="email">email:</label><br />
+            <input type="text" id="email" name="email" value="" /><br />
+            <label for="massage">massage:</label><br />
+            <textarea name="message" rows="5" cols="30"></textarea><br />
+            <input type="submit" value="Submit" class="btn btn-primary" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="leftfoot">
+        <h2>Get in Touch</h2>
+        <p style="text-transform: capitalize">
+          Design and developed by prashant
+
+          <br />&copy Prashant | 2024
+        </p>
+      </div>
+      <div class="rightfoot">
+        <a href="https://wa.me/916398634484"
+          ><i class="ri-whatsapp-line"></i
+        ></a>
+        <h4>Contact Me</h4>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+  </body>
+</html>
+
+
+<!-- overall complete  -->
