@@ -284,6 +284,12 @@ footer {
         width: 100vw;
         padding: 2rem;
     }
+    nav ul{
+        display:none;
+    }
+    #menu{
+        display:block;
+    }
 
     #workwrapper {
         width: 100%; /* Ensure full width */
