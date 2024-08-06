@@ -35,12 +35,11 @@ var t2 = gsap.timeline({
     duration:0.7
   })
   .from(".dv",{
-    z:150,
-    rotate:360,
+    x:-150,
     opacity:0,
-    duration:.5,
+    duration:..3,
     delay:1,
-    stagger:0.9,
+    stagger:0.8,
   })
 //   doubt
   var t3 = gsap.timeline({
